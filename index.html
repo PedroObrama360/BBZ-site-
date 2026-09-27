@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BBZ Materiais Elétricos - Soluções Elétricas e Projetos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <div class="logo">
+            <h1>BBZ <span>MATERIAIS ELÉTRICOS</span></h1>
+        </div>
+        
+        <nav class="nav">
+            <a href="produtos.html">Produtos</a>
+            <a href="#sobre">Sobre Nós</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#orcamentos">Orçamentos</a>
+            <a href="#contato">Contato</a>
+        </nav>
+
+        <div class="header-actions">
+            <!-- BOTÃO DO CARRINHO DE COMPRAS -->
+            <button class="btn-cart" onclick="abrirCarrinho()">
+                🛒 Carrinho (<span id="cart-count">0</span>)
+            </button>
+            <a href="#orcamentos" class="btn-head-orcamento">Pedir Orçamento</a>
+        </div>
+    </header>
+
+    <!-- BANNER PRINCIPAL (HERO BANNER) -->
+<section class="main-banner">
+    <div class="banner-overlay"></div>
+    <div class="container banner-content">
+        <span class="banner-badge">⚡ Atacado & Varejo</span>
+        <h1>Sua Obra e Empresa na <span>Voltagem Certa</span></h1>
+        <p>A linha completa de materiais elétricos, fiação, disjuntores e iluminação LED com os melhores preços do mercado.</p>
+        
+        <div class="banner-features">
+            <div class="b-feat">✔ Pronta Entrega</div>
+            <div class="b-feat">✔ Condições para Eletricistas</div>
+            <div class="b-feat">✔ Garantia de Fábrica</div>
+        </div>
+
+        <div class="banner-buttons">
+            <a href="catalogo.html" class="btn-banner-primary">Ver Catálogo Completo</a>
+            <a href="#orcamentos" class="btn-banner-secondary">Enviar Lista para Orçamento</a>
+        </div>
+    </div>
+</section>
+
+<!-- BANNER PROMOCIONAL SECUNDÁRIO (FAIXA DE DESTAQUE) -->
+<section class="promo-banner container">
+    <div class="promo-content">
+        <div class="promo-text">
+            <h2>Vai construir ou reformar?</h2>
+            <p>Economize comprando seu kit elétrico completo direto no atacado.</p>
+        </div>
+        <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20um%20orçamento%20em%20lote%20para%20minha%20obra" target="_blank" class="btn-promo">
+            Falar com Consultor no WhatsApp 💬
+        </a>
+    </div>
+</section>
+
+    <!-- 1. SEÇÃO DE PRODUTOS -->
+    <section id="produtos" class="section container">
+        <h2 class="section-title">Nossos Produtos</h2>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Busque por cabos, disjuntores, lâmpadas...">
+            <button onclick="buscar()">Buscar</button>
+        </div>
+
+        <div class="product-grid">
+            
+            <!-- PRODUTO 1 -->
+            <div class="product-card">
+                <span class="product-tag">Destaque</span>
+                <span class="stock-tag">Em Estoque</span>
+                <img src="https://via.placeholder.com/200" alt="Cabo Flexível">
+                <h3>Cabo Flexível 2,5mm² (Rolo 100m)</h3>
+                <p class="price">R$ 189,90</p>
+                <button class="btn-buy" onclick="adicionarAoCarrinho('Cabo Flexível 2,5mm² (100m)', 189.90)">+ Adicionar ao Carrinho</button>
+            </div>
+
+            <!-- PRODUTO 2 -->
+            <div class="product-card">
+                <span class="stock-tag">Em Estoque</span>
+                <img src="https://via.placeholder.com/200" alt="Disjuntor Bipolar">
+                <h3>Disjuntor Bipolar 32A DIN</h3>
+                <p class="price">R$ 24,90</p>
+                <button class="btn-buy" onclick="adicionarAoCarrinho('Disjuntor Bipolar 32A DIN', 24.90)">+ Adicionar ao Carrinho</button>
+            </div>
+
+            <!-- PRODUTO 3 -->
+            <div class="product-card">
+                <span class="stock-tag">Em Estoque</span>
+                <img src="https://via.placeholder.com/200" alt="Painel LED">
+                <h3>Painel Plafon LED 18W Quadrado</h3>
+                <p class="price">R$ 19,90</p>
+                <button class="btn-buy" onclick="adicionarAoCarrinho('Painel Plafon LED 18W', 19.90)">+ Adicionar ao Carrinho</button>
+            </div>
+
+            <!-- PRODUTO 4 -->
+            <div class="product-card">
+                <span class="stock-tag">Em Estoque</span>
+                <img src="https://via.placeholder.com/200" alt="Quadro de Distribuição">
+                <h3>Quadro de Distribuição 12/16 Disjuntores</h3>
+                <p class="price">R$ 89,00</p>
+                <button class="btn-buy" onclick="adicionarAoCarrinho('Quadro de Distribuição 12/16', 89.00)">+ Adicionar ao Carrinho</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 2. SEÇÃO SOBRE NÓS -->
+    <section id="sobre" class="section bg-light">
+        <div class="container about-grid">
+            <div class="about-text">
+                <h2 class="section-title left">Sobre a BBZ Materiais Elétricos</h2>
+                <p>A <strong>BBZ Materiais Elétricos</strong> é referência em fornecimento de componentes elétricos para construções residenciais, comerciais e industriais.</p>
+                <p>Com anos de experiência no mercado, nos destacamos pelo atendimento técnico especializado, preços competitivos e compromisso com a segurança e conformidade das normas técnicas.</p>
+                <ul>
+                    <li>⚡ Parceria com as melhores marcas do mercado</li>
+                    <li>⚡ Entrega rápida e logística eficiente</li>
+                    <li>⚡ Atendimento qualificado para eletricistas e engenheiros</li>
+                </ul>
+            </div>
+            <div class="about-stats">
+                <div class="stat-card">
+                    <h3>10+</h3>
+                    <p>Anos no Mercado</p>
+                </div>
+                <div class="stat-card">
+                    <h3>5.000+</h3>
+                    <p>Itens em Estoque</p>
+                </div>
+                <div class="stat-card">
+                    <h3>100%</h3>
+                    <p>Garantia de Qualidade</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SEÇÃO DE PROJETOS -->
+    <section id="projetos" class="section container">
+        <h2 class="section-title">Nossos Projetos</h2>
+        <p class="section-subtitle">Além da venda de materiais, fornecemos suporte e consultoria para grandes instalações.</p>
+
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img">🏢</div>
+                <h3>Projetos de Iluminação Comercial</h3>
+                <p>Estudo luminotécnico completo para empresas, escritórios e galpões visando eficiência energética.</p>
+            </div>
+            <div class="project-card">
+                <div class="project-img">🏭</div>
+                <h3>Painéis Elétricos Industriais</h3>
+                <p>Dimensionamento de componentes e fornecimento de materiais para montagem de quadros de comando.</p>
+            </div>
+            <div class="project-card">
+                <div class="project-img">🏠</div>
+                <h3>Rede Elétrica Residencial</h3>
+                <p>Kits completos e estruturados para infraestrutura de fiação e padrão de entrada de residências.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SEÇÃO DE ORÇAMENTOS (LISTA LOTE) -->
+    <section id="orcamentos" class="section bg-yellow">
+        <div class="container">
+            <h2 class="section-title">Solicite um Orçamento em Lote</h2>
+            <p class="text-center">Envie sua lista de materiais completa para receber uma cotação especial para sua obra.</p>
+
+            <form class="quote-form" onsubmit="enviarOrcamento(event)">
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" required placeholder="Digite seu nome">
+                </div>
+                <div class="form-group">
+                    <label for="telefone">WhatsApp / Telefone:</label>
+                    <input type="tel" id="telefone" required placeholder="(00) 00000-0000">
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo de Cliente:</label>
+                    <select id="tipo">
+                        <option value="Pessoa Física">Pessoa Física / Cliente Final</option>
+                        <option value="Eletricista / Instalador">Eletricista / Instalador</option>
+                        <option value="Construtora / Empresa">Construtora / Empresa</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Lista de Materiais ou Detalhes do Projeto:</label>
+                    <textarea id="mensagem" rows="4" required placeholder="Cole aqui sua lista (ex: 200m cabo 2.5mm, 5 disjuntores 20A...)"></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar Orçamento via WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 5. RODAPÉ & CONTATO -->
+    <footer id="contato" class="footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h3>BBZ Materiais Elétricos</h3>
+                <p>Sua loja de confiança para materiais elétricos e iluminação.</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contato</h4>
+                <p>📞 Telefone: (00) 0000-0000</p>
+                <p>💬 WhatsApp: (00) 00000-0000</p>
+                <p>✉️ E-mail: contato@bbzeletricos.com.br</p>
+            </div>
+            <div class="footer-hours">
+                <h4>Horário de Atendimento</h4>
+                <p>Segunda a Sexta: 08:00 às 18:00</p>
+                <p>Sábado: 08:00 às 12:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 BBZ Materiais Elétricos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL POPUP DO CARRINHO DE COMPRAS -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="fecharCarrinho()">&times;</span>
+            <h2>🛒 Meu Carrinho</h2>
+            <div id="cart-items" class="cart-items-list">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+            <div class="cart-summary">
+                <h3>Total: R$ <span id="cart-total">0,00</span></h3>
+                <button class="btn-submit" onclick="enviarPedidoCarrinho()">Enviar Pedido no WhatsApp</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTÃO FLUTUANTE WHATSAPP -->
+    <a href="https://wa.me/5500000000000" class="whatsapp-float" target="_blank" title="Fale pelo WhatsApp">
+        💬
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
